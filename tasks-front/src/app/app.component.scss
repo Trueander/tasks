@@ -1,0 +1,191 @@
+$background-color-primario: rgb(33, 45, 61);
+$input-color-primario: rgb(32, 32, 62);
+$color-secundario: rgba(64, 123, 240, 0.76);
+$font-size-lista: 22px;
+$font-size-titulo: 30px;
+$font-size-button: 16px;
+$text-color: #f3f3f3;
+$font-weight-primario: 700;
+$font-weight-secundario: 400;
+$font-family-primario: 'Roboto', sans-serif;
+$border-radius-primario: 8px;
+$border-weight: 2px;
+$padding-primario: 20px;
+$padding-secundario: 10px;
+
+button {
+    cursor: pointer;
+}
+
+.modal {
+    
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .modal-body {
+        color: $text-color;
+        font-family: $font-family-primario;
+        padding: $padding-primario;
+        width: 400px;
+        height: 200px;
+        margin: auto;
+        background-color: $background-color-primario;
+        border-radius: $border-radius-primario;
+        border: $border-weight solid $text-color;
+
+        .content {
+            height: 90%;
+
+            div {
+                margin-top: 50px;
+                text-align: center;
+            }
+        }
+
+        .btn-acciones {
+            float: right;
+            button {
+                font-size: $font-size-lista;
+                font-weight: $font-weight-primario;
+                color: $color-secundario;
+                border:none;
+                background-color: transparent;
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+
+
+.inputActivado {
+    width: 90%;
+    padding: $padding-secundario;
+    background-color: $input-color-primario;
+    border: $border-weight solid $color-secundario;
+    border-radius: $border-radius-primario;
+    margin-right: 10px;
+    color: $text-color;
+}
+
+.inputDesactivado {
+    border: none;
+    background: transparent;
+    color: $text-color;
+}
+
+.container {
+    font-family: $font-family-primario;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+    background-color: #f3f3f3;
+
+    .tarea-container {
+        padding: $padding-primario;
+        width: 700px;
+        height: 600px;
+        background-color: $background-color-primario;
+        border-radius: $border-radius-primario;
+        h2 {
+            font-size: $font-size-titulo;
+            font-weight: $font-weight-primario;
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        h6 {
+            font-size: $font-size-lista;
+            font-weight: $font-weight-secundario;
+            border-bottom: $border-weight solid $color-secundario;
+            width: 100px;
+        }
+
+        .formulario {
+            width: 100%;
+            margin-top: 20px;
+            p {
+                position: absolute;
+                font-size: 13px;
+                margin-top: 5px;
+                color: rgb(236, 72, 72);
+            }
+            input {
+                width: 70%;
+                padding: $padding-secundario;
+                background-color: $input-color-primario;
+                border: $border-weight solid $color-secundario;
+                border-radius: $border-radius-primario;
+                margin-right: 10px;
+                color: $text-color;
+            }
+
+            button {
+                width: 25%;
+                padding: $padding-secundario;
+                border-radius: $border-radius-primario;
+                border: 0;
+                color: $text-color;
+                background-color: $color-secundario;
+                font-weight: $font-weight-primario;
+                font-size: $font-size-button;
+                cursor: pointer;
+            }
+        }
+
+        .lista-tareas {
+            margin-top: 20px;
+            padding: $padding-primario;
+            border-radius: $border-radius-primario;
+            border: $border-weight solid $color-secundario;
+            height: 390px;
+            .item-lista {
+                display: grid;
+                grid-template-columns: 40px 1fr 100px;
+                border-bottom: $border-weight solid $color-secundario;
+                margin-bottom: 10px;
+                padding-bottom: $padding-secundario;
+                .checkbox {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                .nombre-tarea {
+                    align-self: center;
+
+                    input {
+                        font-size: $font-size-lista;
+                    }
+                }
+
+                .acciones {
+                    display: flex;
+                    justify-content: space-between;
+                    button {
+                        padding: $padding-secundario;
+                        background-color: transparent;
+                        color: $text-color;
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}
